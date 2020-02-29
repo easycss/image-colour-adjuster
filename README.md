@@ -1,2 +1,3 @@
-# image-colour-adjuster
-A browser app for colour adjusting images using web technologies.
+# Image Colour Adjuster
+## A browser app for colour adjusting images using web technologies.
+
