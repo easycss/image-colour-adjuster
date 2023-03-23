@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Image Colour Adjuster</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-10 m-auto">
+
+<div class="custom-file" style="margin-top:20px;">
+
+<input type="file" class="custom-file-input" id="upload-file">
+
+<label for="upload-file" class="custom-file-label">Choose Image</label>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+<!-- noise, colorise, sepia and invert -->
+<div class="row text-center" style="margin: 15px -10px 25px;">
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="btn btn-secondary btn-disabled" disabled>Add Noise</button>
+
+<button class="filter-btn noise-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="btn btn-secondary btn-disabled" disabled>Colorise</button>
+
+<button class="filter-btn colorize-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="btn btn-secondary btn-disabled" disabled>Sepia</button>
+
+<button class="filter-btn sepia-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="btn btn-secondary btn-disabled" disabled>Invert</button>
+
+<button class="filter-btn invert-add btn btn-info">+</button>
+
+</div></div>
+
+</div>
+<!-- \noise, colorise, sepia and invert -->
+
+
+<!-- brightness, contrast, saturation and vibrance -->
+<div class="row text-center" style="margin: 15px -10px 25px;">
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+<button class="filter-btn brightness-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Brightness</button>
+
+<button class="filter-btn brightness-add btn btn-info">+</button>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+<button class="filter-btn contrast-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Contrast</button>
+
+<button class="filter-btn contrast-add btn btn-info">+</button>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+<button class="filter-btn saturation-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Saturation</button>
+
+<button class="filter-btn saturation-add btn btn-info">+</button>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+<button class="filter-btn vibrance-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Vibrance</button>
+
+<button class="filter-btn vibrance-add btn btn-info">+</button>
+</div>
+</div>
+
+</div><!-- \brightness, contrast, saturation and vibrance -->
+
+
+<!-- channels : red, green and blue + hue -->
+
+<div class="row text-center" style="margin: 15px -10px 25px;">
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="filter-btn channel-red-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Red</button>
+
+<button class="filter-btn channel-red-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="filter-btn channel-green-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Green</button>
+
+<button class="filter-btn channel-green-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="filter-btn channel-blue-remove btn btn-info">-</button>
+
+<button class="btn btn-secondary btn-disabled" disabled>Blue</button>
+
+<button class="filter-btn channel-blue-add btn btn-info">+</button>
+
+</div></div>
+
+<div class="col-md-3">
+<div class="btn-group btn-group-sm">
+
+<button class="btn btn-secondary btn-disabled" disabled>Add Hue</button>
+
+<button class="filter-btn hue-add btn btn-info">+</button>
+
+</div></div>
+</div><!-- \channels : red, green and blue + hue -->
+
+
+<!-- reset / remove filters -->
+<div class="row">    
+
+<div class="col-md-12" style="margin-bottom: 5px;">
+<button id="revert-btn" class="btn btn-danger btn-block">Reset To Original</button>
+</div>
+
+<!-- download finished image -->
+<div class="col-md-12">
+<button id="download-btn" class="btn btn-success btn-block">Download Finished Image</button>
+</div>
+
+</div><!-- / row -->
+
+</div>
+</div> 
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
