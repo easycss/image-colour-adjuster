@@ -4,5 +4,5 @@
 
 # NOT OPTIMISED FOR USE ON PHONES
 
-![Image Colour Adjuster](https://github.com/easycss/image-colour-adjuster/raw/master/ica.jpg)
+![Image Colour Adjuster](https://github.com/easycss/image-colour-adjuster/raw/main/ica.jpg)
 
